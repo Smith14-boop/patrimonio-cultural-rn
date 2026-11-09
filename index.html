@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Patrimônio Cultural e Material do Rio Grande do Norte</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <span class="logo">RN Patrimônio</span>
     <div class="links">
       <a href="#galeria">Galeria</a>
-      <a href="#slide">Slide</a>
+      <a href="#slide" id="abrir-apresentacao">Slide</a>
     </div>
   </nav>
 
@@ -34,17 +34,35 @@
       <div id="grade" class="grade"></div>
     </section>
 
-    <section id="slide" class="secao">
-      <h2 class="titulo-secao">Slide</h2>
-      <div class="slide">
-        <div id="slides"></div>
-        <button class="pausar" id="pausar" aria-label="Pausar">&#10074;&#10074;</button>
-        <button class="seta esquerda" id="anterior" aria-label="Anterior">&#10094;</button>
-        <button class="seta direita" id="proximo" aria-label="Próximo">&#10095;</button>
-      </div>
-      <div id="pontos" class="pontos"></div>
+    <section id="slide" class="secao secao-slide">
+      <h2 class="titulo-secao">Apresentação</h2>
+      <p class="texto-convite">Toque no botão para assistir como um vídeo. A apresentação avança sozinha, e você pode pausar, voltar ou girar o aparelho.</p>
+      <button class="botao botao-grande" id="iniciar">▶ Iniciar apresentação</button>
     </section>
   </main>
+
+  <!-- Player de apresentação (abre em tela inteira, como um vídeo) -->
+  <div id="player" class="player" role="dialog" aria-label="Apresentação" aria-hidden="true">
+    <div class="player-topo">
+      <span id="contador" class="contador">1 / 5</span>
+      <div class="player-acoes">
+        <button id="tela-cheia" class="btn-icone" aria-label="Tela cheia">⛶</button>
+        <button id="fechar" class="btn-icone" aria-label="Fechar">✕</button>
+      </div>
+    </div>
+
+    <div class="progresso"><div id="barra" class="barra"></div></div>
+
+    <div id="slides" class="slides"></div>
+
+    <div class="player-controles">
+      <button id="anterior" class="btn-icone" aria-label="Anterior">&#10094;</button>
+      <button id="play" class="btn-icone btn-play" aria-label="Pausar">&#10074;&#10074;</button>
+      <button id="proximo" class="btn-icone" aria-label="Próximo">&#10095;</button>
+    </div>
+
+    <div id="pontos" class="pontos"></div>
+  </div>
 
   <footer>
     Trabalho escolar. Informações baseadas em reportagens, sites oficiais e publicações acadêmicas.
