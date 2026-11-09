@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrimônio Cultural e Material do Rio Grande do Norte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="menu">
+    <span class="logo">RN Patrimônio</span>
+    <div class="links">
+      <a href="#galeria">Galeria</a>
+      <a href="#slide">Slide</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-fundo"></div>
+    <div class="hero-texto">
+      <p class="selo">Projeto escolar</p>
+      <h1>Patrimônio Cultural e Material<br>do Rio Grande do Norte</h1>
+      <p class="subtitulo">Sabores, festas, música e experiências que fazem parte da identidade potiguar.</p>
+      <a href="#galeria" class="botao">Conhecer</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="galeria" class="secao">
+      <h2 class="titulo-secao">Galeria</h2>
+      <div id="grade" class="grade"></div>
+    </section>
+
+    <section id="slide" class="secao">
+      <h2 class="titulo-secao">Slide</h2>
+      <div class="slide">
+        <div id="slides"></div>
+        <button class="pausar" id="pausar" aria-label="Pausar">&#10074;&#10074;</button>
+        <button class="seta esquerda" id="anterior" aria-label="Anterior">&#10094;</button>
+        <button class="seta direita" id="proximo" aria-label="Próximo">&#10095;</button>
+      </div>
+      <div id="pontos" class="pontos"></div>
+    </section>
+  </main>
+
+  <footer>
+    Trabalho escolar. Informações baseadas em reportagens, sites oficiais e publicações acadêmicas.
+  </footer>
+
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
